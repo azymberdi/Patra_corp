@@ -25,8 +25,9 @@
       apt:
         name: openjdk-8-jdk
         state: present
-      with_items:
-        openjdk-8-jdk
+      vars:
+        packages:
+        - openjdk-8-jdk
 
 - name: Install datadog angent on hosts
   hosts: all
