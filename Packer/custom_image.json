@@ -18,12 +18,12 @@
   "provisioners": [
     {
       "type": "ansible",      
-      "playbook_file": "../Ansible/installations.yaml",    #This Ansible playbook will preinstall dependencies and Datadog agent on the image (AMI)
+      "playbook_file": "../Ansible/installations.yaml",   
       "extra_arguments": ["--extra-vars", "ansible_python_interpreter=/usr/bin/python3"]
     },
     {
       "type" : "shell",
-      "script" : "./tomcat_install.sh"   #This shell script will install Tomcat server to host the web application
+      "script" : "./tomcat_install.sh"  
     }
   ],
   "post-processors": [{
